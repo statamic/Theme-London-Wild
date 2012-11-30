@@ -1,0 +1,24 @@
+###########################################################################################
+#
+#  THEME VARIABLES
+#
+###########################################################################################
+
+# Example fields
+contact_email: hi@example.com
+twitter_url: http://twitter.com/statamic
+twitter_name: statamic
+disqus_shortname: changeme
+
+# Theme settings and language
+theme_name: London Wild Theme
+theme_sidebar_description: "<p>This is the default London Wild Theme, <em>v1.1</em>. Last modified July 26th, 2012.</p>"
+
+no_results_text: "Sorry, no results found!"
+header_links:
+  -
+    name: Statamic
+    link: http://statamic.com
+  -
+    name: Twitter
+    link: http://twitter.com/statamic

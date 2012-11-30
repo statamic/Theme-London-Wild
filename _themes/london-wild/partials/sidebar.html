@@ -1,0 +1,21 @@
+<div class="span3 offset1" id="sidebar">
+
+  <div class="block">
+    <h6>{{ theme_name }}</h6>
+    {{ theme_sidebar_description }}
+  </div>
+
+  <div class="block">
+    <h6>Categories</h6>
+    <ul class="list">
+    {{ taxonomy:listing folder="blog" type="categories" }}
+      {{ if no_results }}
+        <li>{{ no_results_text }}</li>
+      {{ else }}
+        <li><a href="{{ url }}">{{ name }} </a><span class="count">({{ results }})</span></li>
+      {{ endif }}
+    {{ /taxonomy:listing }}
+    </ul>
+  </div>
+
+</div>

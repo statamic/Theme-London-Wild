@@ -1,0 +1,48 @@
+{{ if taxonomy_slug }}
+<div class="row">
+  <div class="span12">
+    <h1>Blog Category: <em>{{ taxonomy_slug }}</em></h1>
+    <hr>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span8 entries">
+
+      {{ entries:listing folder="blog" taxonomy="yes" limit="10"}}
+      {{ if no_results }}
+        {{ no_results_text }}
+      {{ else }}
+        <div class="entry">
+          <h2><a href="{{ url }}">{{ title }}</a></h2>
+          <p class="entry-meta">Posted on <span class="date"> {{ date }}</span>.</p>
+      
+          {{ content }}
+        </div>
+      {{ endif }}
+      {{ /entries:listing }}
+
+      {{ entries:pagination folder="blog" taxonomy="yes" limit="10"}}
+        {{ if previous_page }}
+          <a href="{{ previous_page }}" class="btn">Previous</a>
+        {{ endif }}
+        {{ if next_page }}
+          <a href="{{ next_page }}" class="btn">Next</a>
+        {{ endif }}
+      {{ /entries:pagination }}
+  </div>
+  
+  {{ theme:partial src="sidebar" }}
+
+</div>
+
+{{ else }}
+
+<div class="row">
+  <div class="span12">
+      <h1>Categories</h1>
+      {{ content }}
+    </div>
+</div>
+
+{{ endif }}

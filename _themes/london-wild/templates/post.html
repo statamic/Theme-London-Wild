@@ -1,0 +1,45 @@
+
+<div class="row">
+  <div class="span3">
+    {{ if date }}<div class="entry-meta">Posted on <span class="date"> {{ datestamp format="F jS, Y" }}</span>.</div> {{ endif }}
+    {{ if categories }}
+    <div class="entry-meta">Categories: {{ categories_url_list }}</div>
+    {{ endif }}
+
+    {{ if tags }}
+    <div class="entry-meta">Tags: {{ tags_url_list }}</div>
+    {{ endif }}
+
+  </div>
+  <div class="span9">
+    <h1 class="entry-title">{{ title }}</h1>
+    {{ content }}
+
+    <ul>
+    {{ entries:listing folder="blog" conditions="categories:{ categories_option_list },url:not {page_url}" }}
+      {{ if no_results }}
+        {{# No related posts found #}}
+      {{ else }}
+        {{ if count == 1 }}
+        <h2>Related</h2>
+        <ul>
+        {{ endif }}
+        <li><a href="{{ url }}">{{ title }}</a></li>
+
+        {{ if count == total_results }}
+        </ul>
+        {{ endif }}
+      {{ endif }}
+    {{ /entries:listing }}
+
+  </div>
+
+  {{ if disqus_shortname }}
+  <div class="span3">
+    <h2>Comments</h2>
+  </div>
+  <div class="span9">
+    {{ disqus:comments account="{{ _site_name }}" }}
+  </div>
+  {{ endif }}
+</div>

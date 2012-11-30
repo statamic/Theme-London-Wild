@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="span12">
+    <div class="slides clearfix">
+      <div class="slides-container">
+        <!-- supports sort_by="field|random" sort_dir="asc|desc" first="true" last="true" -->
+        {{ slider sort_by="caption" }}
+          <div class="slide-{{ index }}"><img src="{{ img }}" alt="{{ caption }}" />
+            {{ caption }}
+          </div>
+        {{ /slider }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row gallery">
+
+  {{ gallery_images sort_by="random" limit="8" }}
+  <div class="span3 push-down">
+    <img src="{{ img }}">
+  </div>
+  {{ /gallery_images }}
+</div>

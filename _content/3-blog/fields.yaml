@@ -1,0 +1,4 @@
+type:
+  prefix: date  # or number
+
+_fieldset: blog_post

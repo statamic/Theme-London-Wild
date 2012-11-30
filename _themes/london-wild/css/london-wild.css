@@ -1,0 +1,85 @@
+/*  London Wild by Jack McDade  */
+
+@import url('normalize.css');
+
+body { font-family: 'PT Serif', serif; font-size:16px; color:#43412b; background:#f3f2e8; }
+
+h1 { color:#43412b; font-size:36px; line-height:36px; margin:0 0 10px; padding-bottom:5px; font-weight:normal; }
+h2, h3, h4, h5 {margin-bottom:.5em; font-weight:normal; }
+h2 {font-size:28px; line-height:32px; }
+h3 {font-size:21px; line-height:23px;}
+h6 {color:#6d6a49; text-transform:uppercase; margin-bottom:5px;}
+p {font-size:14px; line-height:1.6em; margin:0 0 1em;}
+a {color:#bf1d2d;}
+li {line-height:21px; margin-left:15px;}
+dt, dd {line-height:21px; padding:5px 0;}
+
+blockquote { border-color:#ddd; border-width:1px 0; border-style:solid; color:#5e5c49; font-size:28px; font-weight:200; font-style:italic; line-height:30px; margin:25px 0; padding:20px 25px; }
+
+.container {background:#fff; border-top:10px solid #000; margin-top:25px; box-shadow:0 0 15px rgba(0,0,0,.1);}
+
+#sidebar p {font-size:14px; color:#93917f;}
+#sidebar ul {margin-left:0;}
+#sidebar .list {font-size:10px; list-style:none; padding:0;}
+#sidebar .list li {font-size:10px; color:#6d6a49; line-height:14px; padding:0 0 5px 0; margin:0;}
+#sidebar .list li a {font-size:14px;}
+#sidebar .list li .count {font-size:11px;}
+
+#footer { margin:25px 0; padding:5px 0 50px; border-top:2px solid #000; }
+#footer p { color:#888; font-weight:200; font-size:12px; line-height:8px; margin:10px 0 5px;}
+#footer p.faint, #footer p.faint a {color:#c2c2c2;}
+#footer p.faint a:hover {text-decoration:none; color:#aaa;}
+#footer a.author {text-decoration:uppercase;}
+#footer-mark {opacity:.4; -webkit-transition:opacity linear .1s;}
+a:hover #footer-mark {opacity:1;}
+
+#logo { color:#000; display:block; font-size:36px; line-height:36px; font-weight:300; margin:25px 0; padding-bottom:0; }
+#logo:hover { color:#bf1d2d; text-decoration:none; }
+
+.nav { background:#000; background-image:-moz-linear-gradient(top, #222, #000); background-image:-ms-linear-gradient(top, #222, #000); background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#222), to(#000)); background-image:-webkit-linear-gradient(top, #222, #000); background-image:-o-linear-gradient(top, #222, #000); background-image:linear-gradient(top, #222, #000);padding:10px 20px; display:block; margin:0 0 25px;}
+.nav li { display:inline-block; margin:0 20px 0 0; }
+.nav li a { text-decoration:none; color:#fff; font-size:14px; font-weight:400;}
+.nav li a.current { font-weight:700; }
+
+.entry {padding-bottom:25px; margin-bottom:25px; border-bottom:1px solid #ddd;}
+.entry img {margin-bottom:15px;}
+.entry h2 a:hover {text-decoration:none; color:#000;}
+.entries .entry:last-child {border-bottom:0; margin-bottom:0;}
+
+.entry-meta {color:#787770; font-style:italic; margin-bottom:10px;}
+.entry-meta .date {color:#262519;}
+
+.subnav {margin:10px 25px 0 0; list-style:none;}
+.subnav li {border-bottom:1px solid #ddd; line-height:24px; padding:0;}
+.subnav li:last-child {border:none;}
+.subnav li a {color:#333; font-size:16px; text-transform:none; padding:4px 0; display:block;}
+.subnav li a.current {color:#000; font-weight:700; text-transform:uppercase;}
+
+.share {float:right; text-align:right; padding:25px 15px 0 0;}
+.share li {display:inline-block; margin-left:7px;}
+.share li a {font-size:11px; color:#6d6a49; text-transform:uppercase; line-height:36px;}
+.share li a:hover {color:#bf1d2d; text-decoration:none;}
+
+.slides {padding-bottom:5px; margin-bottom:20px; border-bottom:1px solid #ccc;}
+.slides-container {height:400px; overflow:hidden;}
+.slides .pagination {float:right; margin-top:10px;}
+.slides .pagination li {list-style:none; display:inline-block;}
+.slides .pagination li a {display:block; width:20px; height:20px; line-height:20px; font-size:11px; color:#fff; overflow:hidden; background:#bf1d2d; text-align:center;}
+.slides .pagination li a:hover {text-decoration:none; background:#555;}
+.slides .pagination li.current a {background:#000;}
+
+.gallery img {opacity:.8; -webkit-transition:opacity linear .15s;}
+.gallery img:hover {opacity:1;}
+
+.btn {display:inline-block;*display:inline;*zoom:1;padding:4px 20px 4px;margin-bottom:0;font-size:15px;text-shadow:0px 1px 0px rgba(0,0,0,.15);line-height:20px;color:#fff;text-align:center;vertical-align:middle;background-color:#b5b4a9;background-image:-moz-linear-gradient(top, #b5b4a9, #9a9a8d);background-image:-ms-linear-gradient(top, #b5b4a9, #9a9a8d);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#b5b4a9), to(#9a9a8d));background-image:-webkit-linear-gradient(top, #b5b4a9, #9a9a8d);background-image:-o-linear-gradient(top, #b5b4a9, #9a9a8d);background-image:linear-gradient(top, #b5b4a9, #9a9a8d);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#b5b4a9', endColorstr='#9a9a8d', GradientType=0);-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;cursor:pointer;*margin-left:.3em;}
+.btn:hover,.btn:active,.btn.active,.btn.disabled,.btn[disabled] {background-color:#a7a79e;}
+.btn:active,.btn.active {background-color:#898770 \9;}
+.btn:hover {color:#fff;text-decoration:none;background-color:#9a9a8d;background-position:0 -15px;-webkit-transition:background-position 0.1s linear;-moz-transition:background-position 0.1s linear;-ms-transition:background-position 0.1s linear;-o-transition:background-position 0.1s linear;transition:background-position 0.1s linear;}
+.btn:focus {outline:thin dotted #333;outline:5px auto -webkit-focus-ring-color;outline-offset:-2px;}
+.btn.active,.btn:active {background-image:none;-webkit-box-shadow:inset 0 2px 4px rgba(0, 0, 0, 0.15),0 1px 2px rgba(0, 0, 0, 0.05);-moz-box-shadow:inset 0 2px 4px rgba(0, 0, 0, 0.15),0 1px 2px rgba(0, 0, 0, 0.05);box-shadow:inset 0 2px 4px rgba(0, 0, 0, 0.15),0 1px 2px rgba(0, 0, 0, 0.05);background-color:#898770;background-color:#898770 \9;outline:0;}
+
+.center {text-align:center;}
+.pull-down {margin-top:100px;}
+.push-down {margin-bottom:20px;}
+.block {padding-bottom:12px; margin-bottom:12px; border-bottom:1px solid #ddd;}
+.block:last-child {border:none;}

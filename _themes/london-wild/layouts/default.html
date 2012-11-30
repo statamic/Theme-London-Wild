@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>{{ _site_name }}</title>
+  <link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ theme:css }}" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="span9">
+        <a href="{{ homepage }}" id="logo">{{ _site_name }}</a>
+      </div>
+      <div class="span3">
+        <ul class="share">
+          {{ header_links }}
+          <li><a href="{{ link }}">{{ name }}</a></li>
+          {{ /header_links }}
+        </ul>
+      </div>
+    </div>
+    {{ if ! hide_header_image }}
+    <img src="{{ theme:img src="header-mountains.jpg" }}" />
+    {{ endif }}
+    
+    <ul class="nav">
+      <li><a href="{{ homepage }}" {{if page_url == "/" }} class="current" {{ endif }}>Home</a></li>
+      {{ nav from="/" }}
+      <li><a href="{{ url }}"{{ if is_current || is_parent }} class="current"{{ endif }}>{{ title }}</a></li>
+      {{ /nav }}
+    </ul>
+    
+    {{ layout_content }}
+    
+    <div class="row">
+      <div class="span12">
+        <div id="footer">
+          <p>{{ theme_name }} by <a href="http://jackmcdade.com" class="author">Jack McDade</a>.</p>
+          <p class="faint">Powered by <a href="http://statamic.com"><img src="{{ theme:img src='statamic-badge-logo.png' }}" id="footer-mark" width="82" height="18" /></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script type="text/javascript" src="{{ theme:js src='slides.min.jquery' }}"></script>
+<script type="text/javascript" src="{{ theme:js }}"></script>
+</body>
+</html>
